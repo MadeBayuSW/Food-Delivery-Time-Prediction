@@ -1,90 +1,62 @@
-# Food-Delivery-Time-Prediction
-📌 Project Description
+# 📦 Food Delivery Time Prediction  
 
-This project focuses on predicting food delivery times using machine learning models. The dataset contains order details such as distance, traffic conditions, weather, courier experience, and time of day. The goal is to build a predictive model that helps optimize courier assignment, improve customer satisfaction, and enhance operational efficiency.
+## 📌 Project Description  
+This project predicts **food delivery times** using machine learning models. The dataset contains features such as **distance, traffic, weather, courier experience, and time of day**.  
 
-Several models were tested — Random Forest, XGBoost, and LightGBM — with XGBoost selected as the final model due to its strong accuracy (R² = 0.81) and generalization performance.
+Three models were tested: **Random Forest, XGBoost, and LightGBM**.  
+The final chosen model is **XGBoost** with the best performance (**R² = 0.810**).  
 
-Additionally, SHAP explainability analysis was conducted to understand key features influencing delivery times, providing actionable business insights.
+Explainability analysis with **SHAP** was also conducted to identify the most important features affecting delivery times, providing actionable business insights.  
 
-📊 Key Steps
+---
 
-Data Understanding & Cleaning
+## 📊 Key Steps  
+1. **Data Understanding & Cleaning**  
+   - Handled missing/unknown values.  
+   - Encoded categorical features (traffic, weather, vehicle type).  
+   - Treated outliers.  
 
-Handled missing/unknown values.
+2. **Feature Engineering**  
+   - Created interaction features (Distance × Traffic).  
+   - Combined preparation and travel time.  
+   - Added peak-hour and bad-weather indicators.  
 
-Encoded categorical features (traffic, weather, vehicle type).
+3. **Exploratory Data Analysis (EDA)**  
+   - Distribution of delivery times.  
+   - Impact of distance, traffic, and weather.  
+   - Correlation heatmaps and interaction plots.  
 
-Removed/treated outliers.
+4. **Modeling & Evaluation**  
+   - Algorithms: Random Forest, XGBoost, LightGBM.  
+   - Metrics: **R², MAE, RMSE**.  
+   - Cross-validation for robustness.  
 
-Feature Engineering
+5. **Model Explainability (SHAP)**  
+   - Top features: Distance, Total Preparation + Travel Time, Traffic Level, Weather, Peak Hour.  
+   - Dependency plots for interpretability.  
 
-Created interaction features (e.g., Distance × Traffic).
+6. **Business Recommendations**  
+   - Use XGBoost predictions for accurate ETAs.  
+   - Optimize courier assignments using traffic & weather insights.  
+   - Retrain the model periodically for operational changes.  
 
-Combined preparation and travel time.
+---
 
-Added peak-hour and bad-weather indicators.
+## 📈 Results  
+- **Best Model**: XGBoost  
+- **Test Performance**:  
+  - R²: **0.810**  
+  - RMSE: **9.236**  
+  - MAE: **6.316**  
 
-Exploratory Data Analysis (EDA)
+---
 
-Analyzed distribution of delivery times.
+## 🚀 Tech Stack  
+- **Python**: pandas, numpy, matplotlib, seaborn  
+- **ML Models**: scikit-learn, XGBoost, LightGBM  
+- **Explainability**: SHAP  
+- **Visualization**: matplotlib, seaborn  
 
-Studied impact of distance, traffic, and weather.
+---
 
-Correlation and interaction plots.
-
-Modeling & Evaluation
-
-Random Forest, XGBoost, LightGBM.
-
-Evaluation metrics: R², MAE, RMSE.
-
-Cross-validation for robustness.
-
-Model Explainability (SHAP)
-
-Identified top features impacting delivery times.
-
-Visualized feature importance & dependencies.
-
-Business Recommendation
-
-Use model predictions to optimize courier assignments.
-
-Factor in traffic, weather, and peak hours for better ETA accuracy.
-
-Retrain model periodically to adapt to changing conditions.
-
-📈 Results
-
-Best Model: XGBoost
-
-Test Performance:
-
-R²: 0.810
-
-RMSE: 9.236
-
-MAE: 6.316
-
-Key Features Impacting Delivery Time
-
-Distance (km)
-
-Total Preparation + Travel Time
-
-Traffic Level
-
-Weather Conditions
-
-Peak Hours
-
-🚀 Tech Stack
-
-Python: pandas, numpy, matplotlib, seaborn
-
-ML Models: scikit-learn, XGBoost, LightGBM
-
-Explainability: SHAP
-
-Visualization: matplotlib, seaborn
+## 📂 Repository Structure  
